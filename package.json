@@ -1,0 +1,40 @@
+{
+    "name": "@becklyn/caisy-migration",
+    "version": "0.0.0",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 0",
+        "lint": "eslint . --max-warnings 0",
+        "format": "eslint . --fix",
+        "build": "npm run clean && swc . -d dist && tsc && chmod +x dist/bin/migrate.js",
+        "clean": "rm -rf dist",
+        "prepublishOnly": "npm run lint && npm run build",
+        "preversion": "npm run lint",
+        "migrate": "node dist/bin/migrate.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Becklyn-Studios/contentful-migration.git"
+    },
+    "files": [
+        "dist/**/*"
+    ],
+    "main": "dist/src/index.js",
+    "types": "dist/src/index.d.ts",
+    "bin": {
+        "migrate": "dist/bin/migrate.js"
+    },
+    "dependencies": {
+        "@caisy/sdk": "^1.3.3",
+        "dotenv": "^17.3.1",
+        "ts-node": "^10.9.2",
+        "tsconfig-paths": "^4.2.0"
+    },
+    "devDependencies": {
+        "@becklyn/eslint": "^1.3.1",
+        "@becklyn/prettier": "^2.1.9",
+        "@becklyn/tsconfig": "^1.1.3",
+        "@swc/cli": "^0.8.0",
+        "@swc/core": "^1.15.11"
+    },
+    "prettier": "@becklyn/prettier"
+}

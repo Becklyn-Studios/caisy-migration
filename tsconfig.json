@@ -1,0 +1,18 @@
+{
+    "extends": "@becklyn/tsconfig/nextjs.json",
+    "compilerOptions": {
+        "baseUrl": ".",
+        "module": "commonjs",
+        "outDir": "./dist",
+        "moduleResolution": "node",
+        "emitDeclarationOnly": true,
+        "noEmit": false,
+        "declarationMap": false,
+        "sourceMap": false,
+        "paths": {
+            "@/migrations/*": ["./migrations/*"]
+        }
+    },
+    "include": ["."],
+    "exclude": ["node_modules", "dist", "test", "eslint.config.mjs"]
+}
