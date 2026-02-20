@@ -36,3 +36,8 @@ const migrationScript: CaisyMigrationScript = async sdk => {
 
 export default migrationScript;
 ```
+
+## Contributing
+
+- Please read the [changeset docs](https://github.com/changesets/changesets/blob/main/docs/intro-to-using-changesets.md) to get familiar with the changeset tooling
+- Use PRs for updates

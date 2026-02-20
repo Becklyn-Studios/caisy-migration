@@ -1,3 +1,7 @@
-# v0.1.0
+# @becklyn/caisy-migration
 
-- (feature) Use code as single source of truth for your caisy blueprints
+## 0.1.0
+
+### Minor Changes
+
+- c04464b: Use code as single source of truth for your caisy blueprints.

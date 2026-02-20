@@ -1,5 +1,5 @@
 {
-    "extends": "@becklyn/tsconfig/nextjs.json",
+    "extends": "@becklyn/tsconfig/base.json",
     "compilerOptions": {
         "baseUrl": ".",
         "module": "commonjs",

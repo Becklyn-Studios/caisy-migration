@@ -1,0 +1,20 @@
+{
+    "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+    "extends": ["config:recommended"],
+    "reviewers": ["team:Becklyn-Studios/user-interface"],
+    "automergeStrategy": "merge-commit",
+    "platformCommit": "enabled",
+    "updatePinnedDependencies": false,
+    "dependencyDashboard": true,
+    "timezone": "Europe/Berlin",
+    "description": "for the first Monday of each month at between 00:00 and 03:59",
+    "schedule": ["* 0-3 1 * *"],
+    "labels": ["UI", "needs-review", "renovate"],
+    "packageRules": [
+        {
+            "groupName": "all dependencies",
+            "matchPackageNames": ["*"],
+            "rangeStrategy": "bump"
+        }
+    ]
+}
