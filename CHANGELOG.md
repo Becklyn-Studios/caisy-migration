@@ -4,4 +4,4 @@
 
 ### Minor Changes
 
-- c04464b: Use code as single source of truth for your caisy blueprints.
+- b95763de: Use code as single source of truth for your caisy blueprints.
