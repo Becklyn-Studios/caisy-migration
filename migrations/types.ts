@@ -1,6 +1,5 @@
 import { initSdk } from "@caisy/sdk";
 
-export type CaisyMigrationScript = (
-    sdk: ReturnType<typeof initSdk>,
-    projectId: string
-) => Promise<void>;
+export type CaisySdk = ReturnType<typeof initSdk>;
+
+export type CaisyMigrationScript = (sdk: CaisySdk, projectId: string) => Promise<void>;

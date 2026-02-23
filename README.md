@@ -28,9 +28,9 @@ Create a migration script in the `migrations` directory (e.g. `migrations/index.
 ```typescript
 import { CaisyMigrationScript } from "@/migrations/types";
 
-const migrationScript: CaisyMigrationScript = async sdk => {
+const migrationScript: CaisyMigrationScript = async (sdk, projectId) => {
     await sdk.PutManyBlueprints({
-        input: { projectId: config.projectId, blueprintInputs: backupBlueprints },
+        input: { projectId, blueprintInputs: backupBlueprints },
     });
 };
 
