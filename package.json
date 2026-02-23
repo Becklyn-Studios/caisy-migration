@@ -42,5 +42,12 @@
         "@swc/cli": "^0.8.0",
         "@swc/core": "^1.15.13"
     },
+    "exports": {
+        ".": {
+            "types": "./dist/index.d.ts",
+            "import": "./dist/index.js",
+            "require": "./dist/index.cjs"
+        }
+    },
     "prettier": "@becklyn/prettier"
 }
