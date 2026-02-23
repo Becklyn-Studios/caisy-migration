@@ -2,17 +2,10 @@
     "extends": "@becklyn/tsconfig/base.json",
     "compilerOptions": {
         "baseUrl": ".",
-        "module": "commonjs",
-        "outDir": "./dist",
-        "moduleResolution": "node",
-        "emitDeclarationOnly": true,
-        "noEmit": false,
+        "rootDir": ".",
         "declarationMap": false,
-        "sourceMap": false,
-        "paths": {
-            "@/migrations/*": ["./migrations/*"]
-        }
+        "sourceMap": false
     },
-    "include": ["."],
-    "exclude": ["node_modules", "dist", "test", "eslint.config.mjs"]
+    "include": ["./**/*.ts"],
+    "exclude": ["./node_modules", "./dist"]
 }
