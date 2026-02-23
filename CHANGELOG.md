@@ -1,5 +1,11 @@
 # @becklyn/caisy-migration
 
+## 0.2.1
+
+### Patch Changes
+
+- bdb2fd6: Fix exports
+
 ## 0.2.0
 
 ### Minor Changes
