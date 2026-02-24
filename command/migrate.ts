@@ -1,8 +1,8 @@
 import { config } from "dotenv";
 import { register } from "ts-node";
 import { register as registerPaths } from "tsconfig-paths";
+import { CaisyMigrationScript } from "@/migrations/types";
 import { initSdk } from "@caisy/sdk";
-import { CaisyMigrationScript } from "../migrations/types";
 
 const loadConfig = () => {
     config({ path: [".env.local", ".env"] });
