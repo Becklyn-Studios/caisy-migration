@@ -1,5 +1,11 @@
 # @becklyn/caisy-migration
 
+## 0.2.2
+
+### Patch Changes
+
+- 8865864: Fix migrate command
+
 ## 0.2.1
 
 ### Patch Changes
