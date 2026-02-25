@@ -1,4 +1,5 @@
 import { BlueprintUpsertInputInput } from "@caisy/sdk";
+import { ensureNoErrors } from "./errors";
 import { CaisySdk } from "./types";
 
 export const upsertBlueprints = async (
@@ -13,19 +14,7 @@ export const upsertBlueprints = async (
         },
     });
 
-    const errors = response?.PutManyBlueprints?.errors;
-
-    if (errors && errors.length > 0) {
-        let errorMessage = "";
-
-        for (const error of errors) {
-            errorMessage += `\n${error?.errorMessage}`;
-        }
-
-        if (errorMessage) {
-            throw new Error(errorMessage);
-        }
-    }
+    ensureNoErrors(response?.PutManyBlueprints?.errors);
 };
 
 export const deleteBlueprintIfExists = async (
