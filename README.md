@@ -37,6 +37,44 @@ const migrationScript: CaisyMigrationScript = async (sdk, projectId) => {
 export default migrationScript;
 ```
 
+### Migration helper functions
+
+This library provides helper functions for common migration tasks.
+
+Upsert blueprints:
+
+```typescript
+import { upsertBlueprints } from "@/migrations/blueprints";
+
+await upsertBlueprints(sdk, projectId, blueprints);
+```
+
+Upsert locales:
+
+```typescript
+import { upsertLocales } from "@/migrations/locales";
+
+await upsertLocales(sdk, projectId, locales);
+```
+
+Upsert previews:
+
+```typescript
+import { upsertPreviews } from "@/migrations/previews";
+
+await upsertPreviews(sdk, projectId, previews);
+```
+
+Upsert webhooks:
+
+```typescript
+import { upsertWebhooks } from "@/migrations/webhooks";
+
+await upsertWebhooks(sdk, projectId, webhooks);
+```
+
+In all of these functions it is recommended to use hard coded ids. That way caisy will properly match changes to the existing resources and do proper upserts. Not using ids or auto generating them by code will lead to unexpected behavior.
+
 ## Contributing
 
 - Please read the [changeset docs](https://github.com/changesets/changesets/blob/main/docs/intro-to-using-changesets.md) to get familiar with the changeset tooling
