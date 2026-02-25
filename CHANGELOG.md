@@ -1,5 +1,13 @@
 # @becklyn/caisy-migration
 
+## 0.3.0
+
+### Minor Changes
+
+- 9829cd5: Add upsertLocales function
+- 30d8b5e: Add upsertPreviews function
+- 30d8b5e: Add upsertWebhooks function
+
 ## 0.2.3
 
 ### Patch Changes
