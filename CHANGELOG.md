@@ -1,5 +1,11 @@
 # @becklyn/caisy-migration
 
+## 0.2.3
+
+### Patch Changes
+
+- 0674cdf: Fix package structure
+
 ## 0.2.2
 
 ### Patch Changes
